@@ -1,0 +1,23 @@
+Source: http-parser
+Priority: extra
+Maintainer: Praveen Arimbrathodiyil <praveen@debian.org>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.4
+Section: libs
+Homepage: <insert the upstream URL, if relevant>
+#Vcs-Git: git://git.debian.org/collab-maint/http-parser.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/http-parser.git;a=summary
+
+Package: http-parser-dev
+Section: libdevel
+Architecture: any
+Depends: http-parserBROKEN (= ${binary:Version})
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>
+
+Package: http-parserBROKEN
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>

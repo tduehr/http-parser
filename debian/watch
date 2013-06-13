@@ -1,0 +1,3 @@
+version=3
+
+https://github.com/joyent/http-parser/tags .*/v?(\d.*)\.(?:tgz|tbz2|tar\.(?:gz|bz2|xz))

@@ -2,6 +2,7 @@ http-parser (2.1-2) unstable; urgency=low
 
   [ Per Andersson ]
   * Update copyright with years
+  * Fix Vcs-* URLs
 
  -- Per Andersson <avtobiff@gmail.com>  Thu, 13 Jun 2013 23:45:49 +0200
 

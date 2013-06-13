@@ -5,8 +5,8 @@ Build-Depends: debhelper (>= 9), dh-exec (>=0.3)
 Standards-Version: 3.9.4
 Section: libs
 Homepage: https://github.com/joyent/http-parser
-Vcs-Git: git://anonscm.debian.org/collab-maint/libhttp-parser.git
-Vcs-Browser: http://anonscm.debian.org/?p=collab-maint/libhttp-parser.git;a=summary
+Vcs-Git: git://anonscm.debian.org/collab-maint/http-parser.git
+Vcs-Browser: http://anonscm.debian.org/gitweb?p=collab-maint/http-parser.git;a=summary
 
 Package: libhttp-parser-dev
 Section: libdevel

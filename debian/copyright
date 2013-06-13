@@ -4,7 +4,7 @@ Source: https://github.com/joyent/http-parser
 
 Files: *
 Copyright: Igor Sysoev
-           Joyent, Inc. and other Node contributors
+           2009-2013 Joyent, Inc. and other Node contributors
 License: Expat
  http_parser.c is based on src/http/ngx_http_parse.c from NGINX copyright
  Igor Sysoev.

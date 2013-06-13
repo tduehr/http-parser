@@ -1,3 +1,10 @@
+http-parser (2.1-2) unstable; urgency=low
+
+  [ Per Andersson ]
+  * Update copyright with years
+
+ -- Per Andersson <avtobiff@gmail.com>  Thu, 13 Jun 2013 23:45:49 +0200
+
 http-parser (2.1-1) unstable; urgency=low
 
   * Initial release (Closes: #712052)

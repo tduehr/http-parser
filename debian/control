@@ -1,23 +1,34 @@
 Source: http-parser
 Priority: extra
 Maintainer: Praveen Arimbrathodiyil <praveen@debian.org>
-Build-Depends: debhelper (>= 8.0.0)
+Build-Depends: debhelper (>= 9), dh-exec (>=0.3)
 Standards-Version: 3.9.4
 Section: libs
-Homepage: <insert the upstream URL, if relevant>
-#Vcs-Git: git://git.debian.org/collab-maint/http-parser.git
-#Vcs-Browser: http://git.debian.org/?p=collab-maint/http-parser.git;a=summary
+Homepage: https://github.com/joyent/http-parser
+Vcs-Git: git://anonscm.debian.org/collab-maint/libhttp-parser.git
+Vcs-Browser: http://anonscm.debian.org/?p=collab-maint/libhttp-parser.git;a=summary
 
-Package: http-parser-dev
+Package: libhttp-parser-dev
 Section: libdevel
 Architecture: any
-Depends: http-parserBROKEN (= ${binary:Version})
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Depends: libhttp-parser (= ${binary:Version}), ${misc:Depends}
+Description: parser for HTTP messages: Development Libraries and Header Files
+ It parses both requests and  responses. The parser is designed to be used in
+ performance HTTP  applications. It does not make any syscalls nor allocations,
+ it does not  buffer data, it can be interrupted at anytime. Depending on your
+ architecture, it only requires about 40 bytes of data per message  stream (in
+ a web server that is per connection).
+ .
+ This package contains development libraries and header files
 
-Package: http-parserBROKEN
-Section: libs
+Package: libhttp-parser
 Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Description: parser for HTTP messages written in C
+ It parses both requests and  responses. The parser is designed to be used in
+ performance HTTP  applications. It does not make any syscalls nor allocations,
+ it does not  buffer data, it can be interrupted at anytime. Depending on your
+ architecture, it only requires about 40 bytes of data per message  stream (in
+ a web server that is per connection).

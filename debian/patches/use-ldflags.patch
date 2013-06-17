@@ -5,33 +5,11 @@ Last-Update: 2013-06-13
 
 --- a/Makefile
 +++ b/Makefile
-@@ -11,6 +11,7 @@
- CFLAGS_DEBUG = $(CFLAGS) -O0 -g $(CFLAGS_DEBUG_EXTRA)
- CFLAGS_FAST = $(CFLAGS) -O3 $(CFLAGS_FAST_EXTRA)
+@@ -36,6 +36,7 @@
  CFLAGS_LIB = $(CFLAGS_FAST) -fPIC
-+LDFLAGS +=-Wl,-soname,libhttp_parser.so.0
  
- test: test_g test_fast
- 	./test_g
-@@ -32,7 +33,7 @@
- 	$(CC) $(CPPFLAGS_FAST) $(CFLAGS_FAST) -c test.c -o $@
+ LDFLAGS_LIB = -shared
++LDFLAGS_LIB += $(LDFLAGS)
  
- http_parser.o: http_parser.c http_parser.h Makefile
--	$(CC) $(CPPFLAGS_FAST) $(CFLAGS_FAST) -c http_parser.c
-+	$(CC) $(CPPFLAGS_FAST) $(CFLAGS_FAST) $(LDFLAGS) -c http_parser.c
- 
- test-run-timed: test_fast
- 	while(true) do time ./test_fast > /dev/null; done
-@@ -41,10 +42,10 @@
- 	valgrind ./test_g
- 
- libhttp_parser.o: http_parser.c http_parser.h Makefile
--	$(CC) $(CPPFLAGS_FAST) $(CFLAGS_LIB) -c http_parser.c -o libhttp_parser.o
-+	$(CC) $(CPPFLAGS_FAST) $(CFLAGS_LIB) $(LDFLAGS) -c http_parser.c -o libhttp_parser.o
- 
- library: libhttp_parser.o
--	$(CC) -shared -o libhttp_parser.so libhttp_parser.o
-+	$(CC) $(LDFLAGS) -shared -o libhttp_parser.so.0 libhttp_parser.o
- 
- package: http_parser.o
- 	$(AR) rcs libhttp_parser.a http_parser.o
+ ifneq (darwin,$(PLATFORM))
+ # TODO(bnoordhuis) The native SunOS linker expects -h rather than -soname...

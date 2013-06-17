@@ -14,7 +14,6 @@ DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 %:
 	dh $@ 
 
-build:
-	dh build
+override_dh_auto_build:
 	make package
 	make library

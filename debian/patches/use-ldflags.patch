@@ -35,12 +35,3 @@ Last-Update: 2013-06-13
  
  package: http_parser.o
  	$(AR) rcs libhttp_parser.a http_parser.o
-@@ -66,7 +67,7 @@
- 
- clean:
- 	rm -f *.o *.a tags test test_fast test_g \
--		http_parser.tar libhttp_parser.so \
-+		http_parser.tar libhttp_parser.so.0 \
- 		url_parser url_parser_g parsertrace parsertrace_g
- 
- contrib/url_parser.c:	http_parser.h

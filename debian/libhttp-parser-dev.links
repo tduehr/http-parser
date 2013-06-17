@@ -1,0 +1,4 @@
+#!/usr/bin/dh-exec
+
+usr/lib/${DEB_HOST_MULTIARCH}/libhttp_parser.so.2.1 usr/lib/${DEB_HOST_MULTIARCH}/libhttp_parser.so.2
+usr/lib/${DEB_HOST_MULTIARCH}/libhttp_parser.so.2 usr/lib/${DEB_HOST_MULTIARCH}/libhttp_parser.so

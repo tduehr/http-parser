@@ -1,4 +1,4 @@
 #!/usr/bin/dh-exec
 
 http_parser.h usr/include
-libhttp_parser.a usr/lib/http-parser/${DEB_HOST_MULTIARCH}/
+libhttp_parser.a usr/lib/${DEB_HOST_MULTIARCH}/

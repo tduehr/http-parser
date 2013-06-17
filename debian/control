@@ -11,24 +11,24 @@ Vcs-Browser: http://anonscm.debian.org/gitweb?p=collab-maint/http-parser.git;a=s
 Package: libhttp-parser-dev
 Section: libdevel
 Architecture: any
-Depends: libhttp-parser (= ${binary:Version}), ${misc:Depends}
-Description: parser for HTTP messages: Development Libraries and Header Files
- It parses both requests and  responses. The parser is designed to be used in
- performance HTTP  applications. It does not make any syscalls nor allocations,
- it does not  buffer data, it can be interrupted at anytime. Depending on your
- architecture, it only requires about 40 bytes of data per message  stream (in
+Depends: libhttp-parser2.1 (= ${binary:Version}), ${misc:Depends}
+Description: parser for HTTP messages: development libraries and header files
+ It parses both requests and responses. The parser is designed to be used in
+ performance HTTP applications. It does not make any syscalls nor allocations,
+ it does not buffer data, it can be interrupted at anytime. Depending on your
+ architecture, it only requires about 40 bytes of data per message stream (in
  a web server that is per connection).
  .
  This package contains development libraries and header files
 
-Package: libhttp-parser
+Package: libhttp-parser2.1
 Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: parser for HTTP messages written in C
- It parses both requests and  responses. The parser is designed to be used in
- performance HTTP  applications. It does not make any syscalls nor allocations,
- it does not  buffer data, it can be interrupted at anytime. Depending on your
- architecture, it only requires about 40 bytes of data per message  stream (in
+ It parses both requests and responses. The parser is designed to be used in
+ performance HTTP applications. It does not make any syscalls nor allocations,
+ it does not buffer data, it can be interrupted at anytime. Depending on your
+ architecture, it only requires about 40 bytes of data per message stream (in
  a web server that is per connection).

@@ -1,1 +1,2 @@
+fix-soname.patch
 use-ldflags.patch

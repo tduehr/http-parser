@@ -20,3 +20,6 @@ DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 override_dh_auto_build:
 	make package
 	make library
+
+override_dh_makeshlibs:
+	dh_makeshlibs -V 'libhttp-parser2.1 (>=2.1)'

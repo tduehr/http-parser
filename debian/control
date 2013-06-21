@@ -1,7 +1,7 @@
 Source: http-parser
 Priority: extra
 Maintainer: Praveen Arimbrathodiyil <praveen@debian.org>
-Build-Depends: debhelper (>= 9), dh-exec (>=0.3)
+Build-Depends: debhelper (>= 9), dh-exec (>=0.3), dpkg-dev (>= 1.16.1~)
 Standards-Version: 3.9.4
 Section: libs
 Homepage: https://github.com/joyent/http-parser

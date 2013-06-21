@@ -1,6 +1,8 @@
-http-parser (2.1-2) unstable; urgency=low
+http-parser (2.1-1) unstable; urgency=low
 
-  [ Per Andersson ]
+  * Initial release (Closes: #712052)
+  
+ [ Per Andersson ]
   * Update copyright with years
   * Fix Vcs-* URLs
 
@@ -13,11 +15,5 @@ http-parser (2.1-2) unstable; urgency=low
     - update use-ldflags.patch to add LDFLAGS to LDFLAGS_LIB
   * Fix multiarch installation path
   * Install symlinks for the -dev package
-
- -- Cédric Boutillier <boutil@debian.org>  Mon, 17 Jun 2013 14:43:06 +0200
-
-http-parser (2.1-1) unstable; urgency=low
-
-  * Initial release (Closes: #712052)
 
  -- Praveen Arimbrathodiyil <praveen@debian.org>  Thu, 13 Jun 2013 20:37:49 +0530

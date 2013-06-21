@@ -2,7 +2,7 @@ http-parser (2.1-1) unstable; urgency=low
 
   * Initial release (Closes: #712052)
   
- [ Per Andersson ]
+  [ Per Andersson ]
   * Update copyright with years
   * Fix Vcs-* URLs
 

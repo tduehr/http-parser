@@ -1,7 +1,7 @@
-http-parser (2.1-1) unstable; urgency=low
+http-parser (2.1-2) unstable; urgency=low
 
-  * Initial release (Closes: #712052)
-  
+  * Team upload.
+
   [ Per Andersson ]
   * Update copyright with years
   * Fix Vcs-* URLs
@@ -9,11 +9,26 @@ http-parser (2.1-1) unstable; urgency=low
   [ Cédric Boutillier ]
   * debian/rules:
     - export build flags
-    - override dh_auto_install instead of defining build: target
+    - override dh_auto_install instead of defining build: target 
+      (Closes: #719036)
   * debian/patches:
     - add fix-soname.patch from upstream to define a proper SONAME
     - update use-ldflags.patch to add LDFLAGS to LDFLAGS_LIB
-  * Fix multiarch installation path
+  * Fix multiarch installation path (Closes: #719780)
+    - ld can now find it with -lhttp_parser (Closes: #724204)
   * Install symlinks for the -dev package
+
+  [ Praveen Arimbrathodiyil ]
+  * add symbols file
+  * unapply patches after build
+  * override dh_makeshlibs
+  * add a -dbg package
+  * add dpkg-dev (>= 1.16.1~) to build deps
+
+ -- Cédric Boutillier <boutil@debian.org>  Tue, 24 Sep 2013 00:29:11 +0200
+
+http-parser (2.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #712052)
 
  -- Praveen Arimbrathodiyil <praveen@debian.org>  Thu, 13 Jun 2013 20:37:49 +0530

@@ -2,16 +2,16 @@ Source: http-parser
 Priority: extra
 Maintainer: Praveen Arimbrathodiyil <praveen@debian.org>
 Build-Depends: debhelper (>= 9), dh-exec (>=0.3), dpkg-dev (>= 1.16.1~)
-Standards-Version: 3.9.4
+Standards-Version: 3.9.8
 Section: libs
 Homepage: https://github.com/joyent/http-parser
-Vcs-Git: git://anonscm.debian.org/collab-maint/http-parser.git
-Vcs-Browser: http://anonscm.debian.org/gitweb?p=collab-maint/http-parser.git;a=summary
+Vcs-Git: https://anonscm.debian.org/collab-maint/http-parser.git
+Vcs-Browser: https://anonscm.debian.org/gitweb?p=collab-maint/http-parser.git;a=summary
 
 Package: libhttp-parser-dev
 Section: libdevel
 Architecture: any
-Depends: libhttp-parser2.1 (= ${binary:Version}), ${misc:Depends}
+Depends: libhttp-parser2.7.1 (= ${binary:Version}), ${misc:Depends}
 Description: parser for HTTP messages: development libraries and header files
  It parses both requests and responses. The parser is designed to be used in
  performance HTTP applications. It does not make any syscalls nor allocations,
@@ -21,7 +21,7 @@ Description: parser for HTTP messages: development libraries and header files
  .
  This package contains development libraries and header files.
 
-Package: libhttp-parser2.1
+Package: libhttp-parser2.7.1
 Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
@@ -33,18 +33,18 @@ Description: parser for HTTP messages written in C
  architecture, it only requires about 40 bytes of data per message stream (in
  a web server that is per connection).
 
-Package: libhttp-parser2.1-dbg
+Package: libhttp-parser2.7.1-dbg
 Architecture: any
 Multi-Arch: same
 Section: debug
 Depends:
-    libhttp-parser2.1 (= ${binary:Version}),
+    libhttp-parser2.7.1 (= ${binary:Version}),
     ${misc:Depends}
-Description: debugging symbols for libhttp-parser2.1
+Description: debugging symbols for libhttp-parser2.7.1
  It parses both requests and responses. The parser is designed to be used in
  performance HTTP applications. It does not make any syscalls nor allocations,
  it does not buffer data, it can be interrupted at anytime. Depending on your
  architecture, it only requires about 40 bytes of data per message stream (in
  a web server that is per connection).
  .
- This package contains the debugging symbols for libhttp-parser2.1.
+ This package contains the debugging symbols for libhttp-parser2.7.1.

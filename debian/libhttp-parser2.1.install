@@ -1,3 +1,0 @@
-#!/usr/bin/dh-exec
-
-libhttp_parser.so.2.1 usr/lib/${DEB_HOST_MULTIARCH}/

@@ -1,3 +1,9 @@
+debian/libhttp-parser*/
+tmp/
+.debhelper/
+debian/files
+debian/*.substvars
+*.log
 /out/
 core
 tags

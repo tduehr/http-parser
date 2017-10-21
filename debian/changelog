@@ -1,3 +1,10 @@
+http-parser (2.7.1-1+nmu1) UNRELEASED; urgency=medium
+
+  * NMU
+  * New upstream version 2.7.1
+
+ -- Timur Duehr <timur.duehr@nccgroup.trust>  Fri, 20 Oct 2017 19:33:32 -0500
+
 http-parser (2.1-2) unstable; urgency=low
 
   * Team upload.
